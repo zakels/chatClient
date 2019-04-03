@@ -19,6 +19,12 @@ namespace SimpleChat
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
+            routes.MapRoute(
+                name: "Chat",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Chat", action = "Index", id = UrlParameter.Optional }
+            );
+
         }
     }
 }

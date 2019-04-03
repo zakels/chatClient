@@ -30,4 +30,15 @@ namespace SimpleChat.Models
             return new ApplicationDbContext();
         }
     }
+    public class ChatContext : DbContext {
+        public ChatContext() : base("YourConnectionName") {
+
+        }
+        public static ChatContext create() {
+            return new ChatContext();
+        }
+
+        public DbSet<ApplicationUser> users { get; set; }
+
+    }
 }
